@@ -16,7 +16,7 @@ pipeline {
 
     steps { 
     withSonarQubeEnv(installationName: 'sonarqubeserver1')  {
-      sh "./gradlew sonar"
+      sh "./gradlew org.sonarsource.scanner.maven:sonar-maven-plugin:3.9.0.2155:sonar"
     }
     }
   }
